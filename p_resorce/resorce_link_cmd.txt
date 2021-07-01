@@ -1,0 +1,5 @@
+https://dbdiagram.io/d/60ddf388dd6a59714828a740
+
+
+##docker cmd
+ docker run --name postgres13 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=mysecretpassword -d postgres
