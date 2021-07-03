@@ -1,4 +1,4 @@
-https://dbdiagram.ifo/d/60ddf388dd6a59714828a740
+https://dbdiagram.io/d/60ddf388dd6a59714828a740
 
 
 ##docker cmd

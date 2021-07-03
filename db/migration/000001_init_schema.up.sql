@@ -1,24 +1,24 @@
 CREATE TABLE "account" (
-  "id" bigserial PRIMARY KEY,
-  "owner" varchar NOT NULL,
-  "balance" float NOT NULL,
-  "courrency" varchar NOT NULL,
-  "created_at" timestamptz NOT NULL DEFAULT (now())
+                           "id" bigint PRIMARY KEY,
+                           "owner" varchar NOT NULL,
+                           "balance" float NOT NULL,
+                           "courrency" varchar NOT NULL,
+                           "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "entries" (
-  "id" bigserial PRIMARY KEY,
-  "account_id" bigserial NOT NULL,
-  "amount" float NOT NULL,
-  "created_at" timestamptz NOT NULL DEFAULT (now())
+                           "id" bigint PRIMARY KEY,
+                           "account_id" bigint NOT NULL,
+                           "amount" float NOT NULL,
+                           "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "transfers" (
-  "id" bigserial PRIMARY KEY,
-  "from_account_id" bigserial NOT NULL,
-  "to_account_id" bigserial NOT NULL,
-  "amount" float NOT NULL,
-  "created_at" timestamptz NOT NULL DEFAULT (now())
+                             "id" bigint PRIMARY KEY,
+                             "from_account_id" bigint NOT NULL,
+                             "to_account_id" bigint NOT NULL,
+                             "amount" float NOT NULL,
+                             "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 ALTER TABLE "entries" ADD FOREIGN KEY ("account_id") REFERENCES "account" ("id");
